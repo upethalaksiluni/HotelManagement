@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./src/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Navbar with Mega Menu -->
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex-shrink-0 flex items-center">
+            <img class="block h-8 w-auto" src="https://tailwindflex.com/images/logo.svg" alt="Logo" />
+            <span class="ml-2 text-xl font-bold text-gray-800">Navbar</span>
+          </div>
+          <div class="hidden sm:block sm:ml-6">
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+
+              <!-- Products Dropdown Trigger -->
+              <div class="relative group">
+                <button
+                  class="text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                  Products
+                  <svg class="ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </button>
+
+                <!-- Mega Menu -->
+                <div
+                  class="absolute left-0 mt-2 w-screen max-w-6xl bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform -translate-x-1/4">
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-6">
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                        Software
+                      </h3>
+                      <ul class="space-y-3">
+                        <li>
+                          <a href="#" class="text-gray-600 hover:text-indigo-600">Web Development</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-gray-600 hover:text-indigo-600">Mobile Apps</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-gray-600 hover:text-indigo-600">Desktop Software</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-gray-600 hover:text-indigo-600">Enterprise Solutions</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-gray-600 hover:text-indigo-600">API Services</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                        Hardware
+                      </h3>
+                      <ul class="space-y-3">
+                        <li>
+                          <a href="#" class="text-gray-600 hover:text-indigo-600">Laptops</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-gray-600 hover:text-indigo-600">Desktops</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-gray-600 hover:text-indigo-600">Tablets</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-gray-600 hover:text-indigo-600">Accessories</a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-gray-600 hover:text-indigo-600">Networking</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                        Featured
+                      </h3>
+                      <div class="bg-gray-100 p-4 rounded-lg">
+                        <img
+                          src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=2065&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          alt="Featured Product" class="rounded-lg mb-3" />
+                        <h4 class="font-medium text-gray-900">New Release</h4>
+                        <p class="text-sm text-gray-600 mb-2">
+                          Check out our latest product offering with advanced
+                          features.
+                        </p>
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">Learn more →</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#" class="text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+              <a href="#" class="text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">About</a>
+              <a href="#" class="text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div class="hidden sm:flex sm:items-center">
+            <a href="#" class="text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-sm font-medium">Login</a>
+            <a href="#"
+              class="ml-4 bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700">Sign
+              Up</a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="sm:hidden">
+            <button type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              aria-expanded="false" id="mobile-menu-button">
+              <span class="sr-only">Open main menu</span>
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state -->
+    <div class="sm:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#" class="bg-gray-100 text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+
+        <!-- Mobile Products Dropdown -->
+        <div class="relative">
+          <button
+            class="w-full text-left text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium flex items-center justify-between mobile-dropdown-trigger">
+            Products
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="hidden px-4 py-2 mobile-dropdown-content">
+            <div class="border-l-2 border-indigo-500 pl-2 mb-4">
+              <h4 class="font-medium text-gray-900 mb-2">Software</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-600 block">Web Development</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-600 block">Mobile Apps</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-600 block">Desktop Software</a>
+                </li>
+              </ul>
+            </div>
+            <div class="border-l-2 border-indigo-500 pl-2">
+              <h4 class="font-medium text-gray-900 mb-2">Hardware</h4>
+              <ul class="space-y-2">
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-600 block">Laptops</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-600 block">Desktops</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-600 hover:text-indigo-600 block">Accessories</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <a href="#"
+          class="text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+        <a href="#" class="text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">About</a>
+        <a href="#" class="text-gray-900 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+
+        <div class="pt-4 pb-3 border-t border-gray-200">
+          <div class="flex items-center px-3 space-y-2 flex-col">
+            <a href="#"
+              class="block w-full text-center text-gray-900 bg-gray-100 px-3 py-2 rounded-md text-base font-medium">
+              Login
+            </a>
+            <a href="#"
+              class="block w-full text-center bg-indigo-600 text-white px-3 py-2 rounded-md text-base font-medium">
+              Sign Up
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar with Mega Menu -->
+
+  <!-- hero section -->
+  <div x-data="heroSlider()" class="relative overflow-hidden" @mouseenter="autoplay = false"
+    @mouseleave="autoplay = true">
+    <div class="relative h-[80vh] min-h-[500px]">
+      <template x-for="(slide, index) in slides" :key="index">
+        <div x-show="currentSlide === index" x-transition.opacity.duration.800ms class="absolute inset-0">
+          <div class="absolute inset-0 bg-gray-800">
+            <img :src="slide.image" :alt="slide.title" class="w-full h-full object-cover opacity-80"
+              @error="replaceBrokenImage($event)" loading="lazy" />
+          </div>
+
+          <div class="container mx-auto px-6 h-full flex items-center">
+            <div class="max-w-2xl text-white slide-content" :class="{
+                                'translate-x-0 opacity-100': currentSlide === index,
+                                'translate-x-10 opacity-0': currentSlide !== index
+                            }">
+              <h2 x-text="slide.title" class="text-4xl md:text-5xl font-bold mb-4"></h2>
+              <p x-text="slide.description" class="text-xl md:text-2xl mb-8"></p>
+              <a :href="slide.buttonUrl"
+                class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors fade-in"
+                x-text="slide.buttonText"></a>
+            </div>
+          </div>
+        </div>
+      </template>
+
+      <button @click="prev()"
+        class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center z-10 transition-all"
+        aria-label="Previous slide">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button @click="next()"
+        class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center z-10 transition-all"
+        aria-label="Next slide">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+        <template x-for="(slide, index) in slides" :key="index">
+          <button @click="goTo(index)" class="w-2 h-2 md:w-3 md:h-3 rounded-full transition-all" :class="{
+                            'bg-white w-4 md:w-6': currentSlide === index,
+                            'bg-white/50': currentSlide !== index
+                        }" :aria-label="`Go to slide ${index + 1}`"></button>
+        </template>
+      </div>
+    </div>
+  </div>
+
+  <!-- hero section -->
+
+
+  <!-- Page content -->
+   <!-- Add this after the navbar and before the main content -->
+
+<div class="relative bg-cover bg-no-repeat bg-center py-48 -mt-24 text-center" style="background-image: url('../images/about-inner/breadcumb-bg.png')">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-center">
+            <div class="w-full">
+                <div class="text-white">
+                    <h4 class="text-5xl font-bold mb-6">Service Details</h4>
+                    <ul class="inline-flex items-center border-2 border-white/30 px-8 py-2 rounded-md mt-6">
+                        <li class="text-lg font-medium font-['Rajdhani']">
+                            <a href="index-3.html" class="hover:opacity-80 transition-opacity">Home</a>
+                        </li>
+                        <li class="mx-2 text-lg font-medium font-['Rajdhani']">></li>
+                        <li class="text-lg font-medium font-['Rajdhani']">Service Details</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- testimonial -->
+
+<section id="testimonies" class="py-20 bg-slate-900">
+    <div class="max-w-6xl mx-8 md:mx-10 lg:mx-20 xl:mx-auto">
+
+
+        <div class="transition duration-500 ease-in-out transform scale-100 translate-x-0 translate-y-0 opacity-100">
+            <div class="mb-12 space-y-5 md:mb-16 md:text-center">
+                <div
+                    class="inline-block px-3 py-1 text-sm font-semibold text-indigo-100 rounded-lg md:text-center text-cn bg-[#202c47] bg-opacity-60 hover:cursor-pointer hover:bg-opacity-40">
+                    Words from Others
+                </div>
+                <h1 class="mb-5 text-3xl font-semibold text-white md:text-center md:text-5xl">
+                    It's not just us.
+                </h1>
+                <p class="text-xl text-gray-100 md:text-center md:text-2xl">
+                    Here's what others have to say about us.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+
+
+            <ul class="space-y-8">
+                <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/kanyewest" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1276461929934942210/cqNhNk6v_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Kanye West">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white">Kanye West</h3>
+                                        <p class="text-gray-500 text-md">Rapper &amp; Entrepreneur</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-gray-300 text-md">Find God.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/tim_cook" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Tim Cook">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white">Tim Cook</h3>
+                                        <p class="text-gray-500 text-md">CEO of Apple</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-gray-300 text-md">Diam quis enim lobortis scelerisque
+                                    fermentum dui faucibus in ornare. Donec pretium vulputate sapien nec sagittis
+                                    aliquam malesuada bibendum.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/kanyewest" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1276461929934942210/cqNhNk6v_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Kanye West">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white">Kanye West</h3>
+                                        <p class="text-gray-500 text-md">Rapper &amp; Entrepreneur</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-gray-300 text-md">Find God.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/tim_cook" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Tim Cook">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white">Tim Cook</h3>
+                                        <p class="text-gray-500 text-md">CEO of Apple</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-gray-300 text-md">Diam quis enim lobortis scelerisque
+                                    fermentum dui faucibus in ornare. Donec pretium vulputate sapien nec sagittis
+                                    aliquam malesuada bibendum.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+
+            <ul class="hidden space-y-8 sm:block">
+                <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/paraga" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1375285353146327052/y6jeByyD_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Parag Agrawal">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white">Parag Agrawal</h3>
+                                        <p class="text-gray-500 text-md">CEO of Twitter</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-gray-300 text-md">Enim neque volutpat ac tincidunt vitae
+                                    semper. Mattis aliquam faucibus purus in massa tempor. Neque vitae tempus quam
+                                    pellentesque nec. Turpis cursus in hac habitasse platea dictumst.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/tim_cook" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Tim Cook">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white">Tim Cook</h3>
+                                        <p class="text-gray-500 text-md">CEO of Apple</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-gray-300 text-md">Diam quis enim lobortis scelerisque
+                                    fermentum dui faucibus in ornare. Donec pretium vulputate sapien nec sagittis
+                                    aliquam malesuada bibendum.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/paraga" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1375285353146327052/y6jeByyD_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Parag Agrawal">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white">Parag Agrawal</h3>
+                                        <p class="text-gray-500 text-md">CEO of Twitter</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-gray-300 text-md">Enim neque volutpat ac tincidunt vitae
+                                    semper. Mattis aliquam faucibus purus in massa tempor. Neque vitae tempus quam
+                                    pellentesque nec. Turpis cursus in hac habitasse platea dictumst.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/tim_cook" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1535420431766671360/Pwq-1eJc_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Tim Cook">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white">Tim Cook</h3>
+                                        <p class="text-gray-500 text-md">CEO of Apple</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-gray-300 text-md">Diam quis enim lobortis scelerisque
+                                    fermentum dui faucibus in ornare. Donec pretium vulputate sapien nec sagittis
+                                    aliquam malesuada bibendum.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+
+            <ul class="hidden space-y-8 lg:block">
+                <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/satyanadella" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1221837516816306177/_Ld4un5A_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Satya Nadella">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white">Satya Nadella</h3>
+                                        <p class="text-gray-500 text-md">CEO of Microsoft</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-gray-300 text-md">Tortor dignissim convallis aenean et
+                                    tortor at. At ultrices mi tempus imperdiet nulla malesuada. Id cursus metus aliquam
+                                    eleifend mi. Quis ipsum suspendisse ultrices gravida dictum fusce ut.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/dan_schulman" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/516916920482672641/3jCeLgFb_400x400.jpeg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Dan Schulman">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white">Dan Schulman</h3>
+                                        <p class="text-gray-500 text-md">CEO of PayPal</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-gray-300 text-md">Quam pellentesque nec nam aliquam sem
+                                    et tortor consequat id. Enim sit amet venenatis urna cursus.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/satyanadella" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/1221837516816306177/_Ld4un5A_400x400.jpg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Satya Nadella">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white">Satya Nadella</h3>
+                                        <p class="text-gray-500 text-md">CEO of Microsoft</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-gray-300 text-md">Tortor dignissim convallis aenean et
+                                    tortor at. At ultrices mi tempus imperdiet nulla malesuada. Id cursus metus aliquam
+                                    eleifend mi. Quis ipsum suspendisse ultrices gravida dictum fusce ut.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+                <li class="text-sm leading-6">
+                    <div class="relative group">
+                        <div
+                            class="absolute transition rounded-lg opacity-25 -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 blur duration-400 group-hover:opacity-100 group-hover:duration-200">
+                        </div><a href="https://twitter.com/dan_schulman" class="cursor-pointer">
+                            <div
+                                class="relative p-6 space-y-6 leading-none rounded-lg bg-slate-800 ring-1 ring-gray-900/5">
+                                <div class="flex items-center space-x-4"><img
+                                        src="https://pbs.twimg.com/profile_images/516916920482672641/3jCeLgFb_400x400.jpeg"
+                                        class="w-12 h-12 bg-center bg-cover border rounded-full" alt="Dan Schulman">
+                                    <div>
+                                        <h3 class="text-lg font-semibold text-white">Dan Schulman</h3>
+                                        <p class="text-gray-500 text-md">CEO of PayPal</p>
+                                    </div>
+                                </div>
+                                <p class="leading-normal text-gray-300 text-md">Quam pellentesque nec nam aliquam sem
+                                    et tortor consequat id. Enim sit amet venenatis urna cursus.</p>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+</section>
+<!-- testimonial -->
+
+        <!-- Page content -->
+
+  <!-- footer for hotel -->
+  <footer class="footer relative text-white overflow-hidden bg-blue-111">
+    <!-- Animated background elements -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
+      <div class="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full filter blur-3xl animate-float1"></div>
+      <div class="absolute top-40 right-20 w-40 h-40 bg-purple-500 rounded-full filter blur-3xl animate-float2"></div>
+      <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div>
+    </div>
+
+    <!-- Main footer content -->
+    <div class="relative max-w-7xl mx-auto px-6 py-16 sm:py-20 lg:px-8">
+      <!-- Grid layout -->
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12">
+        <!-- Logo/Name section with interactive effect -->
+        <div class="group">
+          <div class="flex items-center space-x-2 mb-6">
+            <div
+              class="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition duration-500">
+              <span class="text-xl font-bold">MD</span>
+            </div>
+            <h2 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
+              Manuel Dala
+            </h2>
+          </div>
+          <p class="text-gray-300 mb-6">
+            Innovating digital experiences one line of code at a time.
+          </p>
+
+          <!-- Social media with hover glow -->
+          <div class="flex space-x-4">
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-sky-500 hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-300">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-500 hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick links with hover effect -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6 relative inline-block">
+            <span class="relative z-10">Quick Links</span>
+            <span
+              class="absolute bottom-0 left-0 w-full h-1 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+          </h3>
+          <ul class="space-y-3">
+            <li>
+              <a href="#"
+                class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 flex items-center">
+                <span
+                  class="w-1 h-1 bg-blue-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition duration-300"></span>
+                Home</a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 flex items-center">
+                <span
+                  class="w-1 h-1 bg-blue-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition duration-300"></span>
+                Projects</a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 flex items-center">
+                <span
+                  class="w-1 h-1 bg-blue-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition duration-300"></span>
+                Services</a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 flex items-center">
+                <span
+                  class="w-1 h-1 bg-blue-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition duration-300"></span>
+                Blog</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact info with animated icons -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Get in Touch</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <div class="flex-shrink-0 mt-1">
+                <div class="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center animate-pulse">
+                  <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm text-gray-300">Email</p>
+                <a href="mailto:manueljosedala@hotmail.com"
+                  class="text-white hover:text-blue-400 transition">manueljosedala@hotmail.com</a>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <div class="flex-shrink-0 mt-1">
+                <div class="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center animate-pulse"
+                  style="animation-delay: 0.2s">
+                  <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                    </path>
+                  </svg>
+                </div>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm text-gray-300">Phone</p>
+                <a href="tel:+244941540352" class="text-white hover:text-blue-400 transition">+244 941 540 352</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Newsletter with floating input -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Stay Updated</h3>
+          <p class="text-gray-300 mb-4">
+            Subscribe to my newsletter for the latest updates.
+          </p>
+          <form class="mt-4">
+            <div class="relative">
+              <input type="email" placeholder="Your email"
+                class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-500 text-white" />
+              <button type="submit"
+                class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-4 py-1 transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom section with animated copyright -->
+      <div class="mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm mb-4 md:mb-0">
+          &copy; <span id="year" class="text-blue-400"></span> Manuel Dala.
+          All rights reserved.
+        </p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+          <a href="#" class="text-gray-400 hover:text-white transition">Cookies</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating orb that follows cursor -->
+    <div
+      class="orb absolute w-64 h-64 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 filter blur-3xl pointer-events-none">
+    </div>
+  </footer>
+  <!-- footer for hotel -->
+
+  <!-- footer for hotel css -->
+
+  <style>
+    /* Animations */
+    @keyframes float1 {
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(20px, 20px);
+      }
+    }
+
+    @keyframes float2 {
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(-15px, 15px);
+      }
+    }
+
+    @keyframes float3 {
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      50% {
+        transform: translate(0, -20px);
+      }
+    }
+
+    .animate-float1 {
+      animation: float1 8s ease-in-out infinite;
+    }
+
+    .animate-float2 {
+      animation: float2 10s ease-in-out infinite;
+    }
+
+    .animate-float3 {
+      animation: float3 12s ease-in-out infinite;
+    }
+
+    /* Orb follow effect */
+    .orb {
+      transform: translate(-50%, -50%);
+      opacity: 0.3;
+      transition: transform 0.1s ease-out;
+    }
+  </style>
+  <!-- footer for hotel css -->
+
+  <!-- footer for hotel js -->
+
+  <script>
+    // Update copyright year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mouse follow orb effect
+    document.addEventListener("mousemove", (e) => {
+      const orb = document.querySelector(".orb");
+      orb.style.left = `${e.clientX}px`;
+      orb.style.top = `${e.clientY}px`;
+    });
+  </script>
+  <!-- footer for hotel js -->
+
+  <!-- Navbar with Mega Menu js -->
+  <script>
+    // Mobile menu toggle
+    document
+      .getElementById("mobile-menu-button")
+      .addEventListener("click", function () {
+        const mobileMenu = document.getElementById("mobile-menu");
+        const isExpanded = this.getAttribute("aria-expanded") === "true";
+        this.setAttribute("aria-expanded", !isExpanded);
+        mobileMenu.classList.toggle("hidden");
+      });
+
+    // Mobile dropdown toggles
+    document
+      .querySelectorAll(".mobile-dropdown-trigger")
+      .forEach((trigger) => {
+        trigger.addEventListener("click", function () {
+          const content = this.nextElementSibling;
+          content.classList.toggle("hidden");
+        });
+      });
+  </script>
+  <!-- Navbar with Mega Menu js-->
+
+  <!-- hero section js-->
+  <script>
+    function heroSlider() {
+      return {
+        currentSlide: 0,
+        autoplay: true,
+        interval: null,
+        slides: [
+          {
+            title: "Objavte nové obzory",
+            description: "Cestovateľské zážitky, ktoré vám zmenia život",
+            buttonText: "Rezervovať",
+            buttonUrl: "#",
+            image:
+              "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
+          },
+          {
+            title: "Prírodné krásy",
+            description: "Nádherné výhľady a čistá príroda",
+            buttonText: "Pozrieť ponuku",
+            buttonUrl: "#",
+            image:
+              "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
+          },
+          {
+            title: "Mestské dobrodružstvo",
+            description: "Moderné mestá plné života a kultúry",
+            buttonText: "Viac informácií",
+            buttonUrl: "#",
+            image:
+              "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
+          },
+        ],
+        init() {
+          this.startAutoplay();
+        },
+        next() {
+          this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+        },
+        prev() {
+          this.currentSlide =
+            (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+        },
+        goTo(index) {
+          this.currentSlide = index;
+        },
+        startAutoplay() {
+          this.interval = setInterval(() => {
+            if (this.autoplay) {
+              this.next();
+            }
+          }, 5000);
+        },
+        replaceBrokenImage(event) {
+          // Fallback obrázky z iného zdroja
+          const fallbacks = [
+            "https://picsum.photos/id/1018/1920/1080",
+            "https://picsum.photos/id/1015/1920/1080",
+            "https://picsum.photos/id/1019/1920/1080",
+          ];
+          event.target.src = fallbacks[this.currentSlide % fallbacks.length];
+        },
+      };
+    }
+  </script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- hero section js-->
+  <!-- hero section css-->
+
+  <style>
+    .hero-slide {
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .slide-content {
+      transition: all 0.6s ease 0.3s;
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+  <!-- hero section css-->
+</body>
+
+</html>

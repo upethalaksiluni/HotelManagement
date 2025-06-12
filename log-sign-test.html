@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <title>Login & Signup Form</title>
     <style>
         /* Base Styles */
@@ -12,33 +14,50 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
-            background-color: #f5f7fa;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 20px;
+            position: relative;
+            overflow: hidden;
         }
-        
+
+        /* Canvas Styles */
+        #cosmosCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
         /* Form Container */
         .auth-container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
             width: 100%;
-            max-width: 450px;
+            max-width: 550px;
             overflow: hidden;
             position: relative;
+            z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        
+
         /* Toggle Switch */
         .auth-toggle {
             display: flex;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid rgba(226, 232, 240, 0.3);
+            background: rgba(255, 255, 255, 0.1);
         }
-        
+
         .auth-toggle-btn {
             flex: 1;
             padding: 18px;
@@ -51,12 +70,13 @@
             font-size: 1.1rem;
             color: #64748b;
         }
-        
+
         .auth-toggle-btn.active {
             color: #3b82f6;
             position: relative;
+            background: rgba(59, 130, 246, 0.1);
         }
-        
+
         .auth-toggle-btn.active::after {
             content: '';
             position: absolute;
@@ -64,120 +84,147 @@
             left: 0;
             width: 100%;
             height: 3px;
-            background: #3b82f6;
+            background: linear-gradient(90deg, #3b82f6, #1d4ed8);
             border-radius: 3px 3px 0 0;
         }
-        
+
         /* Form Styles */
         .auth-form {
-            padding: 30px;
+            padding: 9px;
             display: none;
         }
-        
+
         .auth-form.active {
             display: block;
             animation: fadeIn 0.5s ease;
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         .form-title {
             font-size: 1.8rem;
             color: #1e293b;
             margin-bottom: 10px;
             text-align: center;
+            font-weight: 700;
         }
-        
+
         .form-subtitle {
             color: #64748b;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 5px;
             font-size: 1rem;
         }
-        
+
         .input-group {
-            margin-bottom: 20px;
+            margin-bottom: 5px;
             position: relative;
         }
-        
+
         .input-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 500;
             color: #334155;
         }
-        
+
         .input-group input {
             width: 100%;
             padding: 14px;
-            border: 1px solid #e2e8f0;
+            border: 1px solid rgba(226, 232, 240, 0.6);
             border-radius: 8px;
             font-size: 1rem;
-            transition: border 0.3s ease;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.8);
         }
-        
+
         .input-group input:focus {
             outline: none;
             border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+            background: rgba(255, 255, 255, 0.95);
         }
-        
+
         .password-toggle {
             position: absolute;
             right: 15px;
             top: 40px;
             cursor: pointer;
             color: #64748b;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
         }
-        
+
+        .password-toggle:hover {
+            color: #3b82f6;
+        }
+
         .remember-forgot {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
         }
-        
+
         .remember-me {
             display: flex;
             align-items: center;
         }
-        
+
         .remember-me input {
             margin-right: 8px;
         }
-        
+
         .forgot-password {
             color: #3b82f6;
             text-decoration: none;
             font-size: 0.9rem;
+            transition: color 0.3s ease;
         }
-        
+
+        .forgot-password:hover {
+            color: #1d4ed8;
+        }
+
         .submit-btn {
             width: 100%;
             padding: 14px;
-            background: #3b82f6;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
             color: white;
             border: none;
             border-radius: 8px;
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-        
+
         .submit-btn:hover {
-            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
         }
-        
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
         .social-login {
-            margin: 25px 0;
+            margin: 5px 0;
             text-align: center;
             position: relative;
         }
-        
+
         .social-login::before {
             content: '';
             position: absolute;
@@ -185,26 +232,26 @@
             left: 0;
             width: 100%;
             height: 1px;
-            background: #e2e8f0;
+            background: rgba(226, 232, 240, 0.5);
             z-index: 1;
         }
-        
+
         .social-login span {
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
             padding: 0 15px;
             position: relative;
             z-index: 2;
             color: #64748b;
             font-size: 0.9rem;
         }
-        
+
         .social-icons {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-top: 15px;
+            margin-top: 5px;
         }
-        
+
         .social-icon {
             width: 40px;
             height: 40px;
@@ -212,67 +259,78 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
+            background: rgba(248, 250, 252, 0.8);
+            border: 1px solid rgba(226, 232, 240, 0.5);
             cursor: pointer;
             transition: all 0.3s ease;
+            font-weight: 600;
+            color: #64748b;
         }
-        
+
         .social-icon:hover {
-            background: #f1f5f9;
+            background: rgba(241, 245, 249, 0.9);
             transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
+
         .form-footer {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 2px;
             color: #64748b;
             font-size: 0.9rem;
         }
-        
+
         .form-footer a {
             color: #3b82f6;
             text-decoration: none;
             font-weight: 500;
+            transition: color 0.3s ease;
         }
-        
+
+        .form-footer a:hover {
+            color: #1d4ed8;
+        }
+
         /* Responsive */
         @media (max-width: 480px) {
             .auth-container {
                 border-radius: 0;
-                box-shadow: none;
+                margin: 0;
+                max-width: 100%;
             }
-            
+
             body {
                 padding: 0;
-                background: white;
             }
         }
     </style>
 </head>
+
 <body>
+    <canvas id="cosmosCanvas"></canvas>
+    
     <div class="auth-container">
         <div class="auth-toggle">
             <button class="auth-toggle-btn active" id="login-toggle">Login</button>
             <button class="auth-toggle-btn" id="signup-toggle">Sign Up</button>
         </div>
-        
+
         <!-- Login Form -->
-        <form class="auth-form active" id="login-form">
+        <form class="auth-form active w-full" id="login-form">
             <h2 class="form-title">Welcome Back</h2>
             <p class="form-subtitle">Please enter your details to sign in</p>
-            
+
             <div class="input-group">
                 <label for="login-email">Email</label>
                 <input type="email" id="login-email" placeholder="Enter your email" required>
             </div>
-            
+
             <div class="input-group">
                 <label for="login-password">Password</label>
                 <input type="password" id="login-password" placeholder="Enter your password" required>
                 <span class="password-toggle" onclick="togglePassword('login-password')">👁️</span>
             </div>
-            
+
             <div class="remember-forgot">
                 <div class="remember-me">
                     <input type="checkbox" id="remember-me">
@@ -280,9 +338,9 @@
                 </div>
                 <a href="#" class="forgot-password">Forgot password?</a>
             </div>
-            
+
             <button type="submit" class="submit-btn">Sign In</button>
-            
+
             <div class="social-login">
                 <span>Or continue with</span>
                 <div class="social-icons">
@@ -291,46 +349,46 @@
                     <div class="social-icon">in</div>
                 </div>
             </div>
-            
+
             <div class="form-footer">
                 Don't have an account? <a href="#" id="switch-to-signup">Sign up</a>
             </div>
         </form>
-        
+
         <!-- Signup Form -->
         <form class="auth-form" id="signup-form">
             <h2 class="form-title">Create Account</h2>
             <p class="form-subtitle">Get started with your free account</p>
-            
+
             <div class="input-group">
                 <label for="signup-name">Full Name</label>
                 <input type="text" id="signup-name" placeholder="Enter your full name" required>
             </div>
-            
+
             <div class="input-group">
                 <label for="signup-email">Email</label>
                 <input type="email" id="signup-email" placeholder="Enter your email" required>
             </div>
-            
+
             <div class="input-group">
                 <label for="signup-password">Password</label>
                 <input type="password" id="signup-password" placeholder="Create a password" required>
                 <span class="password-toggle" onclick="togglePassword('signup-password')">👁️</span>
             </div>
-            
+
             <div class="input-group">
                 <label for="signup-confirm-password">Confirm Password</label>
                 <input type="password" id="signup-confirm-password" placeholder="Confirm your password" required>
                 <span class="password-toggle" onclick="togglePassword('signup-confirm-password')">👁️</span>
             </div>
-            
+
             <div class="remember-me" style="margin-bottom: 20px;">
                 <input type="checkbox" id="terms-agree" required>
                 <label for="terms-agree">I agree to the <a href="#" style="color: #3b82f6;">Terms</a> and <a href="#" style="color: #3b82f6;">Privacy Policy</a></label>
             </div>
-            
+
             <button type="submit" class="submit-btn">Create Account</button>
-            
+
             <div class="social-login">
                 <span>Or sign up with</span>
                 <div class="social-icons">
@@ -339,7 +397,7 @@
                     <div class="social-icon">in</div>
                 </div>
             </div>
-            
+
             <div class="form-footer">
                 Already have an account? <a href="#" id="switch-to-login">Sign in</a>
             </div>
@@ -354,21 +412,21 @@
         const signupForm = document.getElementById('signup-form');
         const switchToSignup = document.getElementById('switch-to-signup');
         const switchToLogin = document.getElementById('switch-to-login');
-        
+
         function showLoginForm() {
             loginToggle.classList.add('active');
             signupToggle.classList.remove('active');
             loginForm.classList.add('active');
             signupForm.classList.remove('active');
         }
-        
+
         function showSignupForm() {
             loginToggle.classList.remove('active');
             signupToggle.classList.add('active');
             loginForm.classList.remove('active');
             signupForm.classList.add('active');
         }
-        
+
         loginToggle.addEventListener('click', showLoginForm);
         signupToggle.addEventListener('click', showSignupForm);
         switchToSignup.addEventListener('click', (e) => {
@@ -379,7 +437,7 @@
             e.preventDefault();
             showLoginForm();
         });
-        
+
         // Toggle password visibility
         function togglePassword(inputId) {
             const input = document.getElementById(inputId);
@@ -389,19 +447,111 @@
                 input.type = 'password';
             }
         }
-        
-        // Form submission (you would replace this with actual form handling)
+
+        // Form submission
         document.getElementById('login-form').addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Login form submitted!');
-            // Add your actual form submission logic here
         });
-        
+
         document.getElementById('signup-form').addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Signup form submitted!');
-            // Add your actual form submission logic here
         });
+
+        // Canvas Animation
+        const canvas = document.getElementById('cosmosCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        // Initialize canvas
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const particles = [];
+        const numParticles = 80;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.radius = Math.random() * 3 + 1;
+                this.vx = (Math.random() - 0.5) * 0.8;
+                this.vy = (Math.random() - 0.5) * 0.8;
+                this.opacity = Math.random() * 0.8 + 0.2;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Wrap around edges
+                if (this.x < 0) this.x = canvas.width;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.y < 0) this.y = canvas.height;
+                if (this.y > canvas.height) this.y = 0;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+                ctx.fill();
+                
+                // Add glow effect
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = `rgba(255, 255, 255, ${this.opacity * 0.5})`;
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            }
+        }
+
+        // Initialize particles
+        for (let i = 0; i < numParticles; i++) {
+            particles.push(new Particle());
+        }
+
+        // Connect nearby particles
+        function connectParticles() {
+            for (let a = 0; a < particles.length; a++) {
+                for (let b = a + 1; b < particles.length; b++) {
+                    const dx = particles[a].x - particles[b].x;
+                    const dy = particles[a].y - particles[b].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 100) {
+                        const opacity = (100 - distance) / 100 * 0.5;
+                        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[a].x, particles[a].y);
+                        ctx.lineTo(particles[b].x, particles[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        // Animation loop
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+            
+            connectParticles();
+            requestAnimationFrame(animate);
+        }
+
+        // Start animation
+        animate();
     </script>
 </body>
+
 </html>

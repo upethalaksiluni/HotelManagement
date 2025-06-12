@@ -10,35 +10,36 @@
 
 <body>
   <!-- Header -->
-    <header class="bg-white shadow-sm">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">    
-              <div class="flex-shrink-0 flex items-center">
-                <img class="block h-8 w-auto" src="https://tailwindflex.com/images/logo.svg" alt="Logo" />
-                <span class="ml-2 text-xl font-bold text-gray-800">Navbar</span>
-              </div>
-            </div>
-            
-            <nav class="hidden md:flex space-x-8">
-                <a href="#courses" class="text-gray-700 hover:text-rwanda-blue">contact</a>
-            </nav>
-            
-            <div class="flex items-center space-x-4">
-                <button class="px-4 py-2 bg-rwanda-blue text-white rounded-full text-sm hover:bg-blue-800 transition">
-                    Injira
-                </button>
-                <div class="flex space-x-2">
-                   <!-- Call-to-Action Button: Login with Icon -->
-                    <div class="hidden md:block">
-                      <a href="#login" class="bg-blue-500 hover:bg-blue-400 text-white py-2 px-6 rounded-full text-lg transition-all flex items-center gap-2">
-                        <i class="fa-solid fa-right-to-bracket"></i>
-                        Login
-                      </a>
-                    </div>
-                  </div>
-            </div>
+  <header class="bg-white shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <div class="flex-shrink-0 flex items-center">
+          <img class="block h-8 w-auto" src="https://tailwindflex.com/images/logo.svg" alt="Logo" />
+          <span class="ml-2 text-xl font-bold text-gray-800">Navbar</span>
         </div>
-    </header>
+      </div>
+
+      <nav class="hidden md:flex space-x-8">
+        <a href="#courses" class="text-gray-700 hover:text-rwanda-blue">contact number</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <button class="px-4 py-2 bg-rwanda-blue text-white rounded-full text-sm hover:bg-blue-800 transition">
+          Injira
+        </button>
+        <div class="flex space-x-2">
+          <!-- Call-to-Action Button: Login with Icon -->
+          <div class="hidden md:block">
+            <a href="#login"
+              class="bg-blue-500 hover:bg-blue-400 text-white py-2 px-6 rounded-full text-lg transition-all flex items-center gap-2">
+              <i class="fa-solid fa-right-to-bracket"></i>
+              Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
   <!-- Navbar with Mega Menu -->
   <nav class="bg-white shadow-lg">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -290,9 +291,14 @@
 
   <!-- Page content -->
   <!-- services cards -->
-  <div class="mx-auto grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3" style="padding: 0px !important; margin: 0px !important;">
+  <h2 class="text-3xl text-center font-extrabold text-gray-900 sm:text-4xl pt-5">
+    Our Services
+  </h2>
+  <div class="mx-auto grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3"
+    style="padding: 0px !important; margin: 0px !important;">
     <div class="max-w-screen-xl mx-auto p-5 sm:pt-10 sm:px-10 ">
-      <div class="rounded overflow-hidden flex flex-col max-w-xl mx-auto" style="padding: 0px !important; margin: 0px !important;">
+      <div class="rounded overflow-hidden flex flex-col max-w-xl mx-auto"
+        style="padding: 0px !important; margin: 0px !important;">
         <a href="#">
           <img class="w-full"
             src="https://images.pexels.com/photos/5120892/pexels-photo-5120892.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=625.0&amp;sharp=10&amp;w=1000"
@@ -386,13 +392,14 @@
 
   <!-- about us with mission vision -->
   <section class="bg-gray-100">
-    <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl text-center font-extrabold text-gray-900 sm:text-4xl pt-5">
+    About us
+  </h2>
+    <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
         <div class="max-w-lg">
-          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            About Us
-          </h2>
-          <p class="mt-4 text-gray-600 text-lg">
+          
+          <p class="mt-2 text-gray-600 text-lg">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
             eros at lacus feugiat hendrerit sed ut tortor. Suspendisse et
             magna quis elit efficitur consequat. Mauris eleifend velit a
@@ -486,117 +493,674 @@
   <!-- about us with mission vision -->
 
 
-  <!-- recommened room type -->
 
-  <!-- recommened room type -->
-  
+  <!-- room types css -->
+  <style>
+        body {
+            font-family: 'Georgia', serif;
+        }
 
-  <!-- news feed -->
-<div class="w-full min-h-screen flex flex-col items-center justify-center py-10">
-  <span class="text-md md:text-lg font-bold text-[#117278] flex items-center gap-1"><ion-icon name="heart-outline"></ion-icon>Our Insights</span>
-  <h2 class="text-4xl sm:text-5xl md:text-7xl text-center chelsea-market-regular font-bold text-[#117278] md:mb-16 mb-10">News Feeds</h2>
+        .carousel-transition {
+            transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
 
-  <div class="px-4 md:px-[2rem] xl:px-[6rem] flex flex-col lg:flex-row gap-10">
-    <!-- col 1 -->
-    <div class="lg:w-[80%] xl:w-[60%]">
-      <!-- Blog Image -->
-      <img class="w-full object-cover h-[12rem] md:h-[18rem] aspect-square" src="https://techakim.com/sam/tg/7268/li/imgs/bg-blog.png" alt="blog image">
+        .room-card-transition {
+            transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
 
-      <div class="flex flex-col px-6 py-8 border-l border-r border-b">
-        <!-- Author & Category -->
-        <div class="flex gap-4 text-sm text-gray-700 font-semibold">
-          <span class="flex gap-1 items-center"><ion-icon name="person-outline"></ion-icon>By Sammytg7</span>
-          <span class="flex gap-1 items-center"><ion-icon class="-rotate-90" name="pricetags-outline"></ion-icon>TechNews</span>
+        /* Hide side cards on mobile */
+        @media (max-width: 768px) {
+            .side-card {
+                display: none;
+            }
+        }
+    </style>
+  <!-- room types css -->
+
+  <!-- room types content -->
+  <!-- room types content -->
+    <div class="bg-gradient-to-br from-slate-50 to-slate-200 min-h-screen flex items-center justify-center py-8 px-4">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="text-center mb-8 md:mb-12">
+                <h1 class="text-2xl md:text-4xl lg:text-5xl text-slate-700 mb-4 md:mb-6 font-normal">Recommended Room Types</h1>
+                <p class="text-sm md:text-lg text-slate-600 leading-relaxed max-w-4xl mx-auto opacity-80 px-4">
+                    Each of our contemporary rooms, suites and serviced apartments offer sublime views of the Indian Ocean, Beira
+                    Lake and the city beyond. Shades of taupe and turquoise draw the spirit of Colombo's coastline in, while
+                    body-contouring beds draped in luxury linens make for a relaxing stay.
+                </p>
+            </div>
+
+            <!-- Mobile-first carousel container -->
+            <div class="relative w-full overflow-hidden flex items-center justify-center mb-8 md:mb-12">
+                <!-- Mobile: Single card layout -->
+                <div class="md:hidden w-full max-w-sm mx-auto">
+                    <div class="relative">
+                        <div class="w-full h-64 sm:h-80 overflow-hidden rounded-lg shadow-2xl relative">
+                            <img src="" alt="" id="mobileImage" class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-white mt-4 p-4 rounded-lg shadow-xl">
+                            <h3 id="mobileTitle" class="text-lg font-medium text-slate-700 mb-2"></h3>
+                            <p id="mobileDesc" class="text-sm text-slate-600 leading-tight mb-3 opacity-80"></p>
+                            <a href="#" class="inline-block text-blue-500 no-underline font-medium text-sm hover:text-blue-600 transition-colors duration-300">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop: Three card layout -->
+                <div class="hidden md:flex carousel-transition items-center justify-center w-full h-96 lg:h-[28rem]" id="carouselTrack">
+                    <!-- Left card -->
+                    <div class="side-card room-card-transition flex-shrink-0 mx-2 lg:mx-4 cursor-pointer w-48 lg:w-64 h-64 lg:h-80 z-20 transform scale-75 opacity-50 hover:opacity-70 hover:scale-90"
+                        id="leftCard" onclick="previousSlide()">
+                        <div class="w-full h-full overflow-hidden rounded-lg shadow-2xl relative">
+                            <img src="" alt="" id="leftImage" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Center card -->
+                    <div class="room-card-transition flex-shrink-0 mx-2 lg:mx-4 w-full max-w-xl lg:max-w-3xl xl:max-w-4xl h-80 lg:h-96 z-30 transform scale-100 opacity-90 relative"
+                        id="centerCard">
+                        <div class="w-full h-4/5 overflow-hidden rounded-lg shadow-2xl relative">
+                            <img src="" alt="" id="centerImage" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 right-12 lg:right-20 bg-white text-center w-4/5 lg:w-3/5 shadow-xl z-40 px-4 lg:px-6 py-3 lg:py-4 rounded-lg">
+                            <h3 id="centerTitle" class="text-lg lg:text-xl text-slate-700 mb-2 font-medium"></h3>
+                            <p id="centerDesc" class="text-xs lg:text-sm text-slate-600 leading-tight mb-3 overflow-hidden opacity-80 line-clamp-3"></p>
+                            <a href="#" class="inline-block text-blue-500 no-underline font-medium text-sm hover:text-blue-600 transition-colors duration-300">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Right card -->
+                    <div class="side-card room-card-transition flex-shrink-0 mx-2 lg:mx-4 cursor-pointer w-48 lg:w-64 h-64 lg:h-80 z-20 transform scale-75 opacity-50 hover:opacity-70 hover:scale-90"
+                        id="rightCard" onclick="nextSlide()">
+                        <div class="w-full h-full overflow-hidden rounded-lg shadow-2xl relative">
+                            <img src="" alt="" id="rightImage" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation controls -->
+            <div class="flex justify-center items-center gap-3 md:gap-5">
+                <button class="bg-blue-500 text-white border-none w-10 h-10 md:w-12 md:h-12 rounded-full cursor-pointer flex items-center justify-center text-base md:text-lg transition-all duration-300 shadow-lg hover:bg-blue-600 hover:-translate-y-0.5 hover:shadow-xl disabled:bg-gray-400 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
+                    id="prevBtn" onclick="previousSlide()">‹</button>
+                
+                <div class="bg-white bg-opacity-90 px-3 md:px-5 py-2 md:py-2.5 rounded-full font-medium text-slate-700 backdrop-blur-sm text-sm md:text-base">
+                    <span id="currentSlide">1</span> / <span id="totalSlides">4</span>
+                </div>
+                
+                <button class="bg-blue-500 text-white border-none w-10 h-10 md:w-12 md:h-12 rounded-full cursor-pointer flex items-center justify-center text-base md:text-lg transition-all duration-300 shadow-lg hover:bg-blue-600 hover:-translate-y-0.5 hover:shadow-xl disabled:bg-gray-400 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
+                    id="nextBtn" onclick="nextSlide()">›</button>
+            </div>
+
+            <!-- Dot indicators for mobile -->
+            <div class="flex justify-center items-center gap-2 mt-6 md:hidden" id="dotIndicators">
+                <!-- Dots will be generated by JS -->
+            </div>
         </div>
-        <!-- Blog Titile -->
-        <h3 class="text-2xl md:text-3xl font-semibold text-teal-900 chelsea-market-regular">A Beginner's Guide to Modern Web Design</h3>
-        <!-- Blog Description -->
-        <p class="text-md text-gray-500">Step into the world of Tailwind CSS with this beginner-friendly guide. Learn
-          the basics of Tailwind's utility classes, responsive design features, and customization options to kickstart
-          your journey in modern web design.</p>
-      </div>
     </div>
 
+  <!-- room types content -->
 
-    <!-- col 2 -->
-    <div class="w-full flex flex-col items-stretch justify-center">
-      <!-- 1 -->
-      <div class="flex flex-col sm:flex-row gap-6 pb-6 border-b-2 border-gray-100">
-        <!-- Blog Date -->
-        <div class="px-6 py-2 bg-yellow-500 text-white flex flex-col items-center justify-center">
-          <span class="text-7xl font-semibold">13</span>
-          <span class="font-semibold">January</span>
+  <!-- room types js -->
+  <script>
+        // Room data
+        const rooms = [
+            {
+                image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop",
+                title: "Premier Ocean View Room",
+                description: "Ideal for those in search of a soothing retreat along the Indian Ocean, our Premier Ocean View rooms feature stylish, modern décor complemented by endless ocean views from floor-to-ceiling windows.",
+                alt: "Premier Ocean View Room"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&h=600&fit=crop",
+                title: "Specialty Suites",
+                description: "Our unique Specialty Suite is the perfect retreat for families, couples or larger groups looking for extra space to stretch out. Exuding modern luxury, this contemporary one-bedroom suite offers separate living and sleeping areas.",
+                alt: "Specialty Suites"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&h=600&fit=crop",
+                title: "Deluxe City View",
+                description: "Experience the vibrant energy of Colombo from your elegantly appointed room. These sophisticated accommodations offer panoramic city views and modern amenities designed for the discerning traveler.",
+                alt: "Deluxe City View"
+            },
+            {
+                image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&h=600&fit=crop",
+                title: "Luxury Suite",
+                description: "Indulge in ultimate luxury with our premium suite offering. Featuring separate living areas, premium furnishings, and exclusive amenities, this suite provides an unparalleled level of comfort and sophistication.",
+                alt: "Luxury Suite"
+            }
+        ];
+
+        let currentIndex = 0;
+        const totalSlides = rooms.length;
+
+        // Get elements
+        const currentSlideElement = document.getElementById('currentSlide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        // Desktop card elements
+        const leftImage = document.getElementById('leftImage');
+        const centerImage = document.getElementById('centerImage');
+        const centerTitle = document.getElementById('centerTitle');
+        const centerDesc = document.getElementById('centerDesc');
+        const rightImage = document.getElementById('rightImage');
+
+        // Mobile elements
+        const mobileImage = document.getElementById('mobileImage');
+        const mobileTitle = document.getElementById('mobileTitle');
+        const mobileDesc = document.getElementById('mobileDesc');
+
+        function getLeftIndex() {
+            return currentIndex === 0 ? totalSlides - 1 : currentIndex - 1;
+        }
+
+        function getRightIndex() {
+            return currentIndex === totalSlides - 1 ? 0 : currentIndex + 1;
+        }
+
+        function createDotIndicators() {
+            const dotContainer = document.getElementById('dotIndicators');
+            dotContainer.innerHTML = '';
+            
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('button');
+                dot.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-blue-500 w-6' : 'bg-gray-300'}`;
+                dot.onclick = () => {
+                    currentIndex = i;
+                    updateCarousel();
+                };
+                dotContainer.appendChild(dot);
+            }
+        }
+
+        function updateCarousel() {
+            const leftIndex = getLeftIndex();
+            const rightIndex = getRightIndex();
+
+            // Update mobile view
+            mobileImage.src = rooms[currentIndex].image;
+            mobileImage.alt = rooms[currentIndex].alt;
+            mobileTitle.textContent = rooms[currentIndex].title;
+            mobileDesc.textContent = rooms[currentIndex].description;
+
+            // Update desktop view
+            if (leftImage && centerImage && rightImage) {
+                // Update left card (only image)
+                leftImage.src = rooms[leftIndex].image;
+                leftImage.alt = rooms[leftIndex].alt;
+
+                // Update center card (image + description)
+                centerImage.src = rooms[currentIndex].image;
+                centerImage.alt = rooms[currentIndex].alt;
+                centerTitle.textContent = rooms[currentIndex].title;
+                centerDesc.textContent = rooms[currentIndex].description;
+
+                // Update right card (only image)
+                rightImage.src = rooms[rightIndex].image;
+                rightImage.alt = rooms[rightIndex].alt;
+            }
+
+            // Update counter
+            currentSlideElement.textContent = currentIndex + 1;
+            
+            // Update dot indicators
+            createDotIndicators();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function previousSlide() {
+            currentIndex = currentIndex === 0 ? totalSlides - 1 : currentIndex - 1;
+            updateCarousel();
+        }
+
+        // Touch/swipe functionality
+        let startX = 0;
+        let currentX = 0;
+        let isDragging = false;
+
+        document.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        });
+
+        document.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            currentX = e.touches[0].clientX;
+            const diffX = startX - currentX;
+
+            if (Math.abs(diffX) > 10) {
+                e.preventDefault();
+            }
+        });
+
+        document.addEventListener('touchend', (e) => {
+            if (!isDragging) return;
+            isDragging = false;
+
+            const diffX = startX - currentX;
+            const threshold = 50;
+
+            if (diffX > threshold) {
+                nextSlide();
+            } else if (diffX < -threshold) {
+                previousSlide();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                previousSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+            }
+        });
+
+        // Initialize
+        updateCarousel();
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            updateCarousel();
+        });
+    </script>
+  <!-- room types js -->
+
+
+
+  <!-- special offers css -->
+  <style>
+    .flip-card {
+      perspective: 1000px;
+    }
+
+    .flip-inner {
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flipped {
+      transform: rotateY(180deg);
+    }
+
+    .flip-front,
+    .flip-back {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
+    .flip-back {
+      transform: rotateY(180deg);
+    }
+
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+  </style>
+  <!-- special offers css -->
+
+  <!-- special offers content -->
+
+  <div class="bg-gray-50">
+    <!-- Special Offers Section -->
+    <section class="py-16 px-8">
+      <div class="max-w-7xl mx-auto">
+
+        <!-- Cards Container -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+          <!-- Card 1 - Special Offer with Flip Card -->
+          <div class="relative h-[600px] rounded-2xl overflow-hidden shadow-xl card-hover">
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-cover bg-center h-full w-full"
+              style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop');">
+              <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            </div>
+
+            <!-- Content Overlay -->
+            <div class="absolute inset-0 p-6 flex flex-col justify-between">
+              <!-- Flip Card in center -->
+              <div class="flex items-center justify-center">
+                <div class="flip-card w-full h-32" onclick="flipCard(this)">
+                  <div class="flip-inner relative w-full h-[500px]">
+                    <!-- Front -->
+                    <div
+                      class="flip-front absolute w-full h-full bg-white bg-opacity-95 text-gray-800 flex items-center justify-center rounded-xl shadow-xl cursor-pointer">
+                      <!-- Section Header -->
+                      <div class="text-center mb-12  height-[300px]">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                          Special Offers
+                          <br>
+                          <span class="text-3xl md:text-4xl">at Granbell</span>
+                        </h1>
+                        <div class="w-16 h-1 bg-teal-400 mx-auto mb-6"></div>
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Unforgettable Comfort
+                        </h2>
+                        <p class="text-gray-600 max-w-md mx-auto mb-8">
+                          Discover handpicked deals, thoughtfully curated to enrich your stay.
+                        </p>
+                        <button
+                          class="border-2 border-teal-400 text-teal-600 px-8 py-3 rounded-sm font-medium hover:bg-teal-400 hover:text-white transition-all duration-300">
+                          EXPLORE MORE
+                        </button>
+                      </div>
+                    </div>
+                    <!-- Back -->
+                    <div
+                      class="flip-back absolute w-full h-full bg-teal-600 text-white flex items-center justify-center rounded-xl shadow-xl cursor-pointer">
+                      <div class="text-center">
+                        <h3 class="text-lg font-bold mb-1">30% OFF</h3>
+                        <p class="text-sm">Weekend Stay</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Learn More Button at bottom -->
+              <div class="text-center">
+                <button
+                  class="bg-transparent border-2 border-white text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-white hover:text-gray-800 transition-all">
+                  LEARN MORE
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 - Book Direct and Save -->
+          <div class="relative h-[600px] rounded-2xl overflow-hidden shadow-xl card-hover">
+            <!-- Top Half - Image Container -->
+            <div class="h-[300px] relative">
+              <!-- Background Image -->
+              <div class="absolute inset-0 bg-cover bg-center w-full h-full"
+                style="background-image: url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop');">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+              </div>
+              <!-- Adding heading on image -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Book Direct and Save</h2>
+              </div>
+            </div>
+
+            <!-- Bottom Half - Content Container -->
+            <div class="h-[300px] bg-white p-6 flex flex-col justify-between">
+              <!-- Description -->
+              <div class="flex-1 flex items-center justify-center">
+                <p class="text-gray-600 text-opacity-90 max-w-xs text-center">
+                  By booking directly through our website or by calling our hotline, you can take
+                  advantage of the best available rates and save.
+                </p>
+              </div>
+
+              <!-- Learn More Button -->
+              <div class="text-center">
+                <button
+                  class="bg-transparent border-2 border-teal-400 text-teal-600 px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-400 hover:text-white transition-all">
+                  LEARN MORE
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 - High Tea -->
+          <div class="relative h-[600px] rounded-2xl overflow-hidden shadow-xl card-hover">
+            <!-- Top Half - Image Container -->
+            <div class="h-[300px] relative">
+              <!-- Background Image -->
+              <div class="absolute inset-0 bg-cover bg-center w-full h-full"
+                style="background-image: url('https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=2070&auto=format&fit=crop');">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+              </div>
+              <!-- Adding heading on image -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <h2 class="text-3xl font-bold text-white mb-4">High Tea</h2>
+              </div>
+            </div>
+
+            <!-- Bottom Half - Content Container -->
+            <div class="h-[300px] bg-white p-6 flex flex-col justify-between">
+              <!-- Description -->
+              <div class="flex-1 flex items-center justify-center">
+                <p class="text-gray-600 text-opacity-90 max-w-xs text-center">
+                  Join us for an unforgettable experience at our exclusive unlimited high tea buffet.
+                </p>
+              </div>
+
+              <!-- Learn More Button -->
+              <div class="text-center">
+                <button
+                  class="bg-transparent border-2 border-teal-400 text-teal-600 px-6 py-2 rounded-full text-sm font-medium hover:bg-teal-400 hover:text-white transition-all">
+                  LEARN MORE
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <!--  -->
-        <div class="flex flex-col justify-between">
+      </div>
+  </div>
+
+  </section>
+  <!-- special offers content -->
+  <!-- special offers js -->
+
+  <script>
+    function flipCard(el) {
+      const inner = el.querySelector('.flip-inner');
+      inner.classList.toggle('flipped');
+    }
+  </script>
+  <!-- special offers js -->
+
+
+
+  <!-- news feed -->
+  <div class="w-full min-h-screen flex flex-col items-center justify-center py-10">
+    <span class="text-md md:text-lg font-bold text-[#117278] flex items-center gap-1"><ion-icon
+        name="heart-outline"></ion-icon>Our Insights</span>
+    <h2
+      class="text-4xl sm:text-5xl md:text-7xl text-center chelsea-market-regular font-bold text-[#117278] md:mb-16 mb-10">
+      News Feeds</h2>
+
+    <div class="px-4 md:px-[2rem] xl:px-[6rem] flex flex-col lg:flex-row gap-10">
+      <!-- col 1 -->
+      <div class="lg:w-[80%] xl:w-[60%]">
+        <!-- Blog Image -->
+        <img class="w-full object-cover h-[12rem] md:h-[18rem] aspect-square"
+          src="https://techakim.com/sam/tg/7268/li/imgs/bg-blog.png" alt="blog image">
+
+        <div class="flex flex-col px-6 py-8 border-l border-r border-b">
           <!-- Author & Category -->
-          <div class="flex md:gap-4 gap-2 text-sm text-gray-700 font-semibold">
+          <div class="flex gap-4 text-sm text-gray-700 font-semibold">
             <span class="flex gap-1 items-center"><ion-icon name="person-outline"></ion-icon>By Sammytg7</span>
-            <span class="flex gap-1 items-center"><ion-icon class="-rotate-90" name="pricetags-outline"></ion-icon>TechNews</span>
+            <span class="flex gap-1 items-center"><ion-icon class="-rotate-90"
+                name="pricetags-outline"></ion-icon>TechNews</span>
           </div>
           <!-- Blog Titile -->
-          <h3 class="text-2xl md:text-3xl font-semibold text-teal-900 capitalize chelsea-market-regular">Effortless Styling: Unleashing the Power of
-            Tailwind CSS</h3>
+          <h3 class="text-2xl md:text-3xl font-semibold text-teal-900 chelsea-market-regular">A Beginner's Guide to
+            Modern Web Design</h3>
           <!-- Blog Description -->
-          <p class="text-md text-gray-500">Discover how Tailwind CSS revolutionizes web development with its
-            utility-first approach.</p>
+          <p class="text-md text-gray-500">Step into the world of Tailwind CSS with this beginner-friendly guide. Learn
+            the basics of Tailwind's utility classes, responsive design features, and customization options to kickstart
+            your journey in modern web design.</p>
         </div>
       </div>
 
-      <!-- 2 -->
-      <div class="flex flex-col sm:flex-row gap-6 pb-6 border-b-2 border-gray-100">
-        <!-- Blog Date -->
-        <div class="px-6 py-2 bg-teal-500 text-white flex flex-col items-center justify-center">
-          <span class="text-7xl font-semibold">13</span>
-          <span class="font-semibold">January</span>
-        </div>
-        <!--  -->
-        <div class="flex flex-col justify-between">
-          <!-- Author & Category -->
-          <div class="flex md:gap-4 gap-2 text-sm text-gray-700 font-semibold">
-            <span class="flex gap-1 items-center"><ion-icon name="person-outline"></ion-icon>By Sammytg7</span>
-            <span class="flex gap-1 items-center"><ion-icon class="-rotate-90" name="pricetags-outline"></ion-icon>TechNews</span>
-          </div>
-          <!-- Blog Titile -->
-          <h3 class="text-2xl md:text-3xl font-semibold text-teal-900 capitalize chelsea-market-regular">Tailwind CSS Pro Tips: Advanced Techniques for
-            Stunning Web Interfaces</h3>
-          <!-- Blog Description -->
-          <p class="text-md text-gray-500">Elevate your web design skills with advanced tips and tricks for Tailwind
-            CSS. Uncover techniques for optimizing your workflow</p>
-        </div>
-      </div>
 
-      <!-- 3 -->
-      <div class="flex flex-col sm:flex-row gap-6 pb-6 border-b-2 border-gray-100">
-        <!-- Blog Date -->
-        <div class="px-6 py-2 bg-red-500 text-white flex flex-col items-center justify-center">
-          <span class="text-7xl font-semibold">13</span>
-          <span class="font-semibold">January</span>
-        </div>
-        <!--  -->
-        <div class="flex flex-col justify-between">
-          <!-- Author & Category -->
-          <div class="flex md:gap-4 gap-2 text-sm text-gray-700 font-semibold">
-            <span class="flex gap-1 items-center"><ion-icon name="person-outline"></ion-icon>By Sammytg7</span>
-            <span class="flex gap-1 items-center"><ion-icon class="-rotate-90" name="pricetags-outline"></ion-icon>TechNews</span>
+      <!-- col 2 -->
+      <div class="w-full flex flex-col items-stretch justify-center">
+        <!-- 1 -->
+        <div class="flex flex-col sm:flex-row gap-6 pb-6 border-b-2 border-gray-100">
+          <!-- Blog Date -->
+          <div class="px-6 py-2 bg-yellow-500 text-white flex flex-col items-center justify-center">
+            <span class="text-7xl font-semibold">13</span>
+            <span class="font-semibold">January</span>
           </div>
-          <!-- Blog Titile -->
-          <h3 class="text-2xl md:text-3xl font-semibold text-teal-900 capitalize chelsea-market-regular">Responsive Design Made Easy: Harnessing Tailwind
-            CSS for Mobile-First Websites</h3>
-          <!-- Blog Description -->
-          <p class="text-md text-gray-500">Explore how Tailwind CSS simplifies responsive design for mobile-first
-            websites.</p>
+          <!--  -->
+          <div class="flex flex-col justify-between">
+            <!-- Author & Category -->
+            <div class="flex md:gap-4 gap-2 text-sm text-gray-700 font-semibold">
+              <span class="flex gap-1 items-center"><ion-icon name="person-outline"></ion-icon>By Sammytg7</span>
+              <span class="flex gap-1 items-center"><ion-icon class="-rotate-90"
+                  name="pricetags-outline"></ion-icon>TechNews</span>
+            </div>
+            <!-- Blog Titile -->
+            <h3 class="text-2xl md:text-3xl font-semibold text-teal-900 capitalize chelsea-market-regular">Effortless
+              Styling: Unleashing the Power of
+              Tailwind CSS</h3>
+            <!-- Blog Description -->
+            <p class="text-md text-gray-500">Discover how Tailwind CSS revolutionizes web development with its
+              utility-first approach.</p>
+          </div>
         </div>
-      </div>
 
+        <!-- 2 -->
+        <div class="flex flex-col sm:flex-row gap-6 pb-6 border-b-2 border-gray-100">
+          <!-- Blog Date -->
+          <div class="px-6 py-2 bg-teal-500 text-white flex flex-col items-center justify-center">
+            <span class="text-7xl font-semibold">13</span>
+            <span class="font-semibold">January</span>
+          </div>
+          <!--  -->
+          <div class="flex flex-col justify-between">
+            <!-- Author & Category -->
+            <div class="flex md:gap-4 gap-2 text-sm text-gray-700 font-semibold">
+              <span class="flex gap-1 items-center"><ion-icon name="person-outline"></ion-icon>By Sammytg7</span>
+              <span class="flex gap-1 items-center"><ion-icon class="-rotate-90"
+                  name="pricetags-outline"></ion-icon>TechNews</span>
+            </div>
+            <!-- Blog Titile -->
+            <h3 class="text-2xl md:text-3xl font-semibold text-teal-900 capitalize chelsea-market-regular">Tailwind CSS
+              Pro Tips: Advanced Techniques for
+              Stunning Web Interfaces</h3>
+            <!-- Blog Description -->
+            <p class="text-md text-gray-500">Elevate your web design skills with advanced tips and tricks for Tailwind
+              CSS. Uncover techniques for optimizing your workflow</p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="flex flex-col sm:flex-row gap-6 pb-6 border-b-2 border-gray-100">
+          <!-- Blog Date -->
+          <div class="px-6 py-2 bg-red-500 text-white flex flex-col items-center justify-center">
+            <span class="text-7xl font-semibold">13</span>
+            <span class="font-semibold">January</span>
+          </div>
+          <!--  -->
+          <div class="flex flex-col justify-between">
+            <!-- Author & Category -->
+            <div class="flex md:gap-4 gap-2 text-sm text-gray-700 font-semibold">
+              <span class="flex gap-1 items-center"><ion-icon name="person-outline"></ion-icon>By Sammytg7</span>
+              <span class="flex gap-1 items-center"><ion-icon class="-rotate-90"
+                  name="pricetags-outline"></ion-icon>TechNews</span>
+            </div>
+            <!-- Blog Titile -->
+            <h3 class="text-2xl md:text-3xl font-semibold text-teal-900 capitalize chelsea-market-regular">Responsive
+              Design Made Easy: Harnessing Tailwind
+              CSS for Mobile-First Websites</h3>
+            <!-- Blog Description -->
+            <p class="text-md text-gray-500">Explore how Tailwind CSS simplifies responsive design for mobile-first
+              websites.</p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Icons -->
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- Icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <!-- news feed -->
+
+<!-- our gallery -->
+   <section class="bg-white">
+    <div class="py-4 px-2 mx-auto max-w-screen-xl sm:py-4 lg:px-6">
+		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-full">
+			<div class="col-span-2 sm:col-span-1 md:col-span-2 bg-gray-50 h-auto md:h-full flex flex-col">
+				<a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
+					<img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+					<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+					<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Wines</h3>
+				</a>
+			</div>
+			<div class="col-span-2 sm:col-span-1 md:col-span-2 bg-stone-50">
+				<a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 mb-4">
+					<img src="https://images.unsplash.com/photo-1504675099198-7023dd85f5a3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+					<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+					<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Gin</h3>
+				</a>
+				<div class="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-2">
+					<a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40">
+						<img src="https://images.unsplash.com/photo-1571104508999-893933ded431?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+						<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+						<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Whiskey</h3>
+					</a>
+					<a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40">
+						<img src="https://images.unsplash.com/photo-1626897505254-e0f811aa9bf7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+						<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+						<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Vodka</h3>
+					</a>
+				</div>
+			</div>
+			<div class="col-span-2 sm:col-span-1 md:col-span-1 bg-sky-50 h-auto md:h-full flex flex-col">
+				<a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
+					<img src="https://images.unsplash.com/photo-1693680501357-a342180f1946?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+					<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+					<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Brandy</h3>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="py-4 px-2 mx-auto max-w-screen-xl sm:py-4 lg:px-6">
+		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-full">
+			<div class="col-span-2 sm:col-span-1 md:col-span-2 bg-gray-50 h-auto md:h-full flex flex-col">
+				<a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
+					<img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+					<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+					<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Wines</h3>
+				</a>
+			</div>
+			<div class="col-span-2 sm:col-span-1 md:col-span-2 bg-stone-50">
+				<a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 mb-4">
+					<img src="https://images.unsplash.com/photo-1504675099198-7023dd85f5a3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+					<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+					<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Gin</h3>
+				</a>
+				<div class="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-2">
+					<a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40">
+						<img src="https://images.unsplash.com/photo-1571104508999-893933ded431?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+						<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+						<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Whiskey</h3>
+					</a>
+					<a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40">
+						<img src="https://images.unsplash.com/photo-1626897505254-e0f811aa9bf7?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+						<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+						<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Vodka</h3>
+					</a>
+				</div>
+			</div>
+			<div class="col-span-2 sm:col-span-1 md:col-span-1 bg-sky-50 h-auto md:h-full flex flex-col">
+				<a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
+					<img src="https://images.unsplash.com/photo-1693680501357-a342180f1946?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+					<div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+					<h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Brandy</h3>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+  <!-- our gallery -->
+
 
   <!-- footer for hotel -->
   <footer class="footer relative text-white overflow-hidden bg-blue-111">
@@ -741,7 +1305,7 @@
               <input type="email" placeholder="Your email"
                 class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-500 text-white" />
               <button type="submit"
-                class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-4 py-1 transition">
+                class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-4 py-1 mt-3 transition">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
                   </path>

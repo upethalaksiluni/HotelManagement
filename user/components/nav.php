@@ -8,7 +8,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <!-- Logo & Brand -->
             <div class="flex items-center">
                 <div class="flex-shrink-0">
-                    <span class="text-2xl font-serif font-bold text-gray-900">Granbell Hotel</span>
+                    <span class="text-2xl font-serif font-bold text-gray-900">The Royal Grand Hotel</span>
                 </div>
                 
                 <!-- Desktop Navigation -->

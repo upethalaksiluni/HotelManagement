@@ -13,80 +13,43 @@ function isActive($page) {
 }
 ?>
 
-<nav class="bg-white text-gray-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-            <div class="flex items-center">
-                <div class="flex-shrink-0">
-                    <span class="text-xl font-bold">Hotel System</span>
+<!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-serif font-bold text-navy">
+                    The Royal Grand Hotel
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="dashboard.php" 
-                           class="px-3 py-2 rounded-md text-sm font-medium <?php echo isActive('dashboard.php'); ?>">
-                            Dashboard
-                        </a>
-                        <a href="book-room.php" 
-                           class="px-3 py-2 rounded-md text-sm font-medium <?php echo isActive('book-room.php'); ?>">
-                            Book Room
-                        </a>
-                        <a href="book-taxi.php" 
-                           class="px-3 py-2 rounded-md text-sm font-medium <?php echo isActive('book-taxi.php'); ?>">
-                            Book Taxi
-                        </a>
-                        <a href="bookings.php" 
-                           class="px-3 py-2 rounded-md text-sm font-medium <?php echo isActive('bookings.php'); ?>">
-                            My Bookings
-                        </a>
-                        <a href="profile.php" 
-                           class="px-3 py-2 rounded-md text-sm font-medium <?php echo isActive('profile.php'); ?>">
-                            Profile
-                        </a>
-                    </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-navy hover:text-gold transition-colors duration-300">Home</a>
+                    <a href="accommodation.html" class="text-navy hover:text-gold transition-colors duration-300">Accommodation</a>
+                    <a href="dining.html" class="text-navy hover:text-gold transition-colors duration-300">Dining</a>
+                    <a href="offers.html" class="text-navy hover:text-gold transition-colors duration-300">Offers</a>
+                    <a href="contact.html" class="text-navy hover:text-gold transition-colors duration-300">Contact</a>
                 </div>
-            </div>
-            <div class="flex items-center">
-                <span class="text-sm mr-4"><?php echo htmlspecialchars($currentUser['username']); ?></span>
-                <a href="../logout.php" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-navy-light">Logout</a>
-            </div>
-
-            <!-- Mobile menu button -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-300 hover:text-white">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-navy">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
-        </div>
-    </div>
-
-    <!-- Mobile menu -->
-    <div class="md:hidden hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="dashboard.php" 
-               class="block px-3 py-2 rounded-md text-sm font-medium <?php echo isActive('dashboard.php'); ?>">
-                Dashboard
-            </a>
-            <a href="book-room.php" 
-               class="block px-3 py-2 rounded-md text-sm font-medium <?php echo isActive('book-room.php'); ?>">
-                Book Room
-            </a>
-            <a href="book-taxi.php" 
-               class="block px-3 py-2 rounded-md text-sm font-medium <?php echo isActive('book-taxi.php'); ?>">
-                Book Taxi
-            </a>
-            <a href="bookings.php" 
-               class="block px-3 py-2 rounded-md text-sm font-medium <?php echo isActive('bookings.php'); ?>">
-                My Bookings
-            </a>
-            <a href="profile.php" 
-               class="block px-3 py-2 rounded-md text-sm font-medium <?php echo isActive('profile.php'); ?>">
-                Profile
-            </a>
-        </div>
-    </div>
-</nav>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="text-navy hover:text-gold transition-colors duration-300">Home</a>
+                    <a href="accommodation.html" class="text-navy hover:text-gold transition-colors duration-300">Accommodation</a>
+                    <a href="dining.html" class="text-navy hover:text-gold transition-colors duration-300">Dining</a>
+                    <a href="offers.html" class="text-navy hover:text-gold transition-colors duration-300">Offers</a>
+                    <a href="contact.html" class="text-navy hover:text-gold transition-colors duration-300">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
 <script>
     // Mobile menu toggle
